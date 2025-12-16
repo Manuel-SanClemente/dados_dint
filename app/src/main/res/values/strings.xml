@@ -2,4 +2,13 @@
     <string name="app_name">Dados</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dice_selection_title">Selecciona tus dados</string>
+    <string name="howmany_title">¿Cuantos giros?</string>
+    <string name="result_title">Resultado</string>
+    <string name="btn_anterior">Volver</string>
+    <string name="btn_siguiente">Siguiente</string>
+    <string name="tiradas">Tiradas</string>
+    <string name="media">Media</string>
+    <string name="moda">Moda</string>
+    <string name="history_title">Historial</string>
 </resources>

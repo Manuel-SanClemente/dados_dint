@@ -21,7 +21,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Selecciona tus dados"
+            android:text="@string/dice_selection_title"
+            android:textSize="20sp"
             />
 
     </LinearLayout>
@@ -41,19 +42,42 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:backgroundTint="@color/black">
+                android:id="@+id/d4_card"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:backgroundTint="@color/gray"
+                android:layout_marginEnd="10dp"
+                app:cardCornerRadius="15dp">
+
+                <ImageView
+                    android:id="@+id/d4_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/light_d4"
+                    android:padding="10dp"
+                    />
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:backgroundTint="@color/black">
+                android:id="@+id/d6_card"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:backgroundTint="@color/gray"
+                android:layout_marginStart="10dp"
+                app:cardCornerRadius="15dp">
+
+                <ImageView
+                    android:id="@+id/d6_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/light_d6"
+                    android:padding="10dp"
+                    />
 
             </androidx.cardview.widget.CardView>
 
@@ -63,19 +87,42 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:backgroundTint="@color/gray">
+                android:id="@+id/d8_card"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:backgroundTint="@color/gray"
+                android:layout_marginEnd="10dp"
+                app:cardCornerRadius="15dp">
+
+                <ImageView
+                    android:id="@+id/d8_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/light_d8"
+                    android:padding="10dp"
+                    />
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:backgroundTint="@color/gray">
+                android:id="@+id/d10_card"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:backgroundTint="@color/gray"
+                android:layout_marginStart="10dp"
+                app:cardCornerRadius="15dp">
+
+                <ImageView
+                    android:id="@+id/d10_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/light_d10"
+                    android:padding="10dp"
+                    />
 
             </androidx.cardview.widget.CardView>
 
@@ -84,25 +131,62 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+
             <androidx.cardview.widget.CardView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:backgroundTint="@color/blue">
+                android:id="@+id/d12_card"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:backgroundTint="@color/gray"
+                android:layout_marginEnd="10dp"
+                app:cardCornerRadius="15dp">
+
+                <ImageView
+                    android:id="@+id/d12_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/light_d12"
+                    android:padding="10dp"
+                    />
 
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:backgroundTint="@color/blue">
+                android:id="@+id/d20_card"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:backgroundTint="@color/gray"
+                android:layout_marginStart="10dp"
+                app:cardCornerRadius="15dp">
+
+                <ImageView
+                    android:id="@+id/d20_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/light_d20"
+                    android:padding="10dp"
+                    />
 
             </androidx.cardview.widget.CardView>
+
         </LinearLayout>
 
         <androidx.cardview.widget.CardView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:backgroundTint="@color/brown">
+            android:id="@+id/d100_card"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:backgroundTint="@color/gray"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="15dp">
+
+            <ImageView
+                android:id="@+id/d100_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/light_d100"
+                android:padding="10dp"
+                />
 
         </androidx.cardview.widget.CardView>
 
@@ -113,6 +197,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Siguiente"
         />
 
 

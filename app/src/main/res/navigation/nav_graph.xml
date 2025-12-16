@@ -9,5 +9,36 @@
         android:id="@+id/diceFragment"
         android:name="com.example.dados.DiceFragment"
         android:label="fragment_dice"
-        tools:layout="@layout/fragment_dice" />
+        tools:layout="@layout/fragment_dice" >
+        <action
+            android:id="@+id/action_diceFragment_to_girosFragment"
+            app:destination="@id/girosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/girosFragment"
+        android:name="com.example.dados.GirosFragment"
+        android:label="GirosFragment" >
+        <action
+            android:id="@+id/action_girosFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+        <action
+            android:id="@+id/action_girosFragment_to_diceFragment"
+            app:destination="@id/diceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.dados.ResultFragment"
+        android:label="ResultFragment" >
+        <action
+            android:id="@+id/action_resultFragment_to_diceFragment"
+            app:destination="@id/diceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.dados.HistoryFragment"
+        android:label="HistoryFragment" />
+    <fragment
+        android:id="@+id/stadisticsFragment"
+        android:name="com.example.dados.StadisticsFragment"
+        android:label="StadisticsFragment" />
 </navigation>
