@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import com.example.dados.databinding.FragmentResultBinding
+import kotlin.random.Random
 
 class ResultFragment : Fragment() {
 
@@ -34,10 +35,6 @@ class ResultFragment : Fragment() {
         val desc = binding.resultDetails
         val btn = binding.resultNext
 
-        list.forEach { str ->
-            str.split("_")
-        }
-
 
         btn.setOnClickListener {
             view.findNavController().navigate(R.id.action_resultFragment_to_diceFragment)
@@ -47,5 +44,10 @@ class ResultFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    fun calculateRolls(dice: Int, rolls: Int): List<Int> {
+        val result = List (rolls) { Random.nextInt(0, 4) }
+        return result
     }
 }

@@ -55,7 +55,6 @@ class GirosFragment : Fragment() {
         }
 
         btonnext.setOnClickListener {
-            // TODO: Pasar la información de diceList al siguiente fragmento (ResultFragment)
             // Cada elemento de diceList contiene el nombre del dado y cuántos giros tiene
             var msg=""
 
