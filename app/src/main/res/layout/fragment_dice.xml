@@ -45,13 +45,16 @@
             android:orientation="horizontal"
             android:layout_margin="10dp">
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/d4_card"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
-                android:backgroundTint="@color/gray"
+                app:cardBackgroundColor="@color/gray"
                 android:layout_marginEnd="10dp"
-                app:cardCornerRadius="15dp">
+                app:cardCornerRadius="15dp"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true">
 
                 <ImageView
                     android:id="@+id/d4_img"
@@ -61,15 +64,18 @@
                     android:padding="10dp"
                     />
 
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/d6_card"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
-                android:backgroundTint="@color/gray"
+                app:cardBackgroundColor="@color/gray"
                 android:layout_marginStart="10dp"
-                app:cardCornerRadius="15dp">
+                app:cardCornerRadius="15dp"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true">
 
                 <ImageView
                     android:id="@+id/d6_img"
@@ -79,7 +85,7 @@
                     android:padding="10dp"
                     />
 
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
 
         </LinearLayout>
 
@@ -90,13 +96,16 @@
             android:orientation="horizontal"
             android:layout_margin="10dp">
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/d8_card"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
-                android:backgroundTint="@color/gray"
+                app:cardBackgroundColor="@color/gray"
                 android:layout_marginEnd="10dp"
-                app:cardCornerRadius="15dp">
+                app:cardCornerRadius="15dp"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true">
 
                 <ImageView
                     android:id="@+id/d8_img"
@@ -106,15 +115,18 @@
                     android:padding="10dp"
                     />
 
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/d10_card"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
-                android:backgroundTint="@color/gray"
+                app:cardBackgroundColor="@color/gray"
                 android:layout_marginStart="10dp"
-                app:cardCornerRadius="15dp">
+                app:cardCornerRadius="15dp"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true">
 
                 <ImageView
                     android:id="@+id/d10_img"
@@ -124,7 +136,7 @@
                     android:padding="10dp"
                     />
 
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
 
         </LinearLayout>
 
@@ -134,13 +146,16 @@
             android:orientation="horizontal"
             android:layout_margin="10dp">
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/d12_card"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
-                android:backgroundTint="@color/gray"
+                app:cardBackgroundColor="@color/gray"
                 android:layout_marginEnd="10dp"
-                app:cardCornerRadius="15dp">
+                app:cardCornerRadius="15dp"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true">
 
                 <ImageView
                     android:id="@+id/d12_img"
@@ -150,15 +165,18 @@
                     android:padding="10dp"
                     />
 
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/d20_card"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
-                android:backgroundTint="@color/gray"
+                app:cardBackgroundColor="@color/gray"
                 android:layout_marginStart="10dp"
-                app:cardCornerRadius="15dp">
+                app:cardCornerRadius="15dp"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true">
 
                 <ImageView
                     android:id="@+id/d20_img"
@@ -168,17 +186,20 @@
                     android:padding="10dp"
                     />
 
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
 
         </LinearLayout>
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/d100_card"
             android:layout_width="125dp"
             android:layout_height="125dp"
-            android:backgroundTint="@color/gray"
+            app:cardBackgroundColor="@color/gray"
             android:layout_margin="10dp"
-            app:cardCornerRadius="15dp">
+            app:cardCornerRadius="15dp"
+            android:checkable="true"
+            android:clickable="true"
+            android:focusable="true">
 
             <ImageView
                 android:id="@+id/d100_img"
@@ -188,7 +209,7 @@
                 android:padding="10dp"
                 />
 
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
     </LinearLayout>
 

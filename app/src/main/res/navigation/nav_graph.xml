@@ -17,28 +17,49 @@
     <fragment
         android:id="@+id/girosFragment"
         android:name="com.example.dados.GirosFragment"
-        android:label="GirosFragment" >
+        android:label="GirosFragment"
+        tools:layout="@layout/fragment_giros">
         <action
             android:id="@+id/action_girosFragment_to_resultFragment"
-            app:destination="@id/resultFragment" />
+            app:destination="@id/resultFragment">
+            <!-- ARGUMENTO MOVIDO AQUÍ -->
+            <argument
+                android:name="result"
+                app:argType="string" />
+        </action>
         <action
             android:id="@+id/action_girosFragment_to_diceFragment"
             app:destination="@id/diceFragment" />
+        <argument
+            android:name="dices"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/resultFragment"
         android:name="com.example.dados.ResultFragment"
-        android:label="ResultFragment" >
+        android:label="ResultFragment"
+        tools:layout="@layout/fragment_result">
         <action
             android:id="@+id/action_resultFragment_to_diceFragment"
             app:destination="@id/diceFragment" />
+        <!-- Argumento recibido desde la acción anterior -->
+        <argument
+            android:name="result"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/historyFragment"
         android:name="com.example.dados.HistoryFragment"
-        android:label="HistoryFragment" />
+        android:label="HistoryFragment"
+        tools:layout="@layout/fragment_history"/>
     <fragment
         android:id="@+id/stadisticsFragment"
         android:name="com.example.dados.StadisticsFragment"
-        android:label="StadisticsFragment" />
+        android:label="StadisticsFragment"
+        tools:layout="@layout/fragment_stadistics"/>
+    <fragment
+        android:id="@+id/configFragment"
+        android:name="com.example.dados.ConfigFragment"
+        android:label="ConfigFragment"
+        tools:layout="@layout/fragment_config"/>
 </navigation>

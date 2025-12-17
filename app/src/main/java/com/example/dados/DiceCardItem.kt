@@ -1,11 +1,8 @@
 package com.example.dados
 
-import android.media.Image
-import android.widget.Button
+// CLASE DE DATOS. Esto determina los atributos de la entidad DiceCard. Estos son los datos importantes de un dado.
 
-class DiceCardItem {
-    var diceImg: Image? = null
-    var diceCount: Int? = null
-    var dicePlus: Button? = null
-    var diceMinus: Button? = null
-}
+data class DiceCardItem (
+    val diceName: String,
+    var diceCount: Int = 1
+)

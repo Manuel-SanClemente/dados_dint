@@ -17,4 +17,6 @@
     <string name="app_theme_txt">Tema de Aplicación</string>
     <string name="vibrate_txt">Vibración</string>
     <string name="sound_txt">Sonido</string>
+    <string name="navigation_drawer_open">Abrir menú</string>
+    <string name="navigation_drawer_close">Cerrar menú</string>
 </resources>
