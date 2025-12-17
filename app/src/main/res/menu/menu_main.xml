@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/start_option"
+        android:title="@string/start_txt"
+        app:showAsAction="always">
+    </item>
+
+    <item
+        android:id="@+id/history_option"
+        android:title="@string/history_title"
+        app:showAsAction="always">
+
+    </item>
+
+    <item
+        android:id="@+id/stats_option"
+        android:title="@string/stats_title"
+        app:showAsAction="always">
+
+    </item>
+
+    <item
+        android:id="@+id/config_option"
+        android:title="@string/config_title"
+        app:showAsAction="always" >
+
+    </item>
+
+</menu>

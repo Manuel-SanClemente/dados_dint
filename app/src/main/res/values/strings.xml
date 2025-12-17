@@ -11,4 +11,10 @@
     <string name="media">Media</string>
     <string name="moda">Moda</string>
     <string name="history_title">Historial</string>
+    <string name="start_txt">Inicio</string>
+    <string name="stats_title">Estadisticas</string>
+    <string name="config_title">Configuración</string>
+    <string name="app_theme_txt">Tema de Aplicación</string>
+    <string name="vibrate_txt">Vibración</string>
+    <string name="sound_txt">Sonido</string>
 </resources>
