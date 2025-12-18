@@ -1,5 +1,6 @@
 package com.example.dados
 
+import android.content.Context
 import android.icu.text.SimpleDateFormat
 import android.icu.util.Calendar
 import android.os.Bundle
@@ -9,8 +10,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import com.example.dados.databinding.FragmentResultBinding
-import java.time.LocalDate
-import java.time.LocalDateTime
 import kotlin.random.Random
 
 class ResultFragment : Fragment() {
@@ -41,27 +40,48 @@ class ResultFragment : Fragment() {
 
         var resultNumber: Int = 0
         var txtcontent: String = ""
+        var dicestopass: String = ""
 
         for (i in 0 until list.lastIndex) {
             var j = list[i].split("_")
             var dicetopass = j[0]
             var resultadocalc = calculateRolls(j[0], j[1].toInt())
+            dicestopass += "$dicetopass "
             txtcontent += "$dicetopass: $resultadocalc \n"
-            resultNumber = calculateTotalRolls(resultadocalc)
+            resultNumber += calculateTotalRolls(resultadocalc)
         }
 
         val date = Calendar.getInstance().time
-        val formatter = SimpleDateFormat("dd/MM/yyyy HH:mm")
+        val formatter = SimpleDateFormat("dd/MM/yyyy-HH:mm")
         val dateformatted = formatter.format(date)
 
         result.text = resultNumber.toString()
         desc.text = txtcontent
 
-        val toHistory= "${result.text} ${desc.text} $dateformatted"
-
         btn.setOnClickListener {
+            // Guardar en historial antes de volver
+            saveToHistory(
+                result.text.toString(),
+                dicestopass,
+                dateformatted
+            )
+
             view.findNavController().navigate(R.id.action_resultFragment_to_diceFragment)
         }
+    }
+
+    private fun saveToHistory(result: String, dices: String, dateTime: String) {
+        val sharedPrefs = requireContext().getSharedPreferences("DiceHistory", Context.MODE_PRIVATE)
+        val currentHistory = sharedPrefs.getString("history", "") ?: ""
+
+        val newEntry = "$result;;$dices;;$dateTime"
+        val updatedHistory = if (currentHistory.isEmpty()) {
+            newEntry
+        } else {
+            "$newEntry|$currentHistory" // Agrega al inicio para mostrar lo más reciente primero
+        }
+
+        sharedPrefs.edit().putString("history", updatedHistory).apply()
     }
 
     override fun onDestroyView() {
@@ -71,13 +91,13 @@ class ResultFragment : Fragment() {
 
     fun calculateRolls(dice: String, rolls: Int): List<Int>? {
         val result = when (dice) {
-            "D4" -> List (rolls) { Random.nextInt(0, 4) }
-            "D6" -> List (rolls) { Random.nextInt(0, 6) }
-            "D8" -> List (rolls) { Random.nextInt(0, 8) }
-            "D10" -> List (rolls) { Random.nextInt(0, 10) }
-            "D12" -> List (rolls) { Random.nextInt(0, 12) }
-            "D20" -> List (rolls) { Random.nextInt(0, 20) }
-            "D100" -> List (rolls) { Random.nextInt(0, 100) }
+            "D4" -> List (rolls) { Random.nextInt(1, 5) }
+            "D6" -> List (rolls) { Random.nextInt(1, 7) }
+            "D8" -> List (rolls) { Random.nextInt(1, 9) }
+            "D10" -> List (rolls) { Random.nextInt(1, 11) }
+            "D12" -> List (rolls) { Random.nextInt(1, 13) }
+            "D20" -> List (rolls) { Random.nextInt(1, 21) }
+            "D100" -> List (rolls) { Random.nextInt(1, 101) }
             else -> null
         }
         return result
