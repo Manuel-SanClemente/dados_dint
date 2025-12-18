@@ -28,12 +28,51 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/filter_containers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stadistics_title">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/filter_1d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/filter_txt_1d"
+            android:layout_marginHorizontal="2dp"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/filter_7d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/filter_txt_7d"
+            android:layout_marginHorizontal="2dp"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/filter_1m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/filter_txt_1m"
+            android:layout_marginHorizontal="2dp"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/filter_1y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/filter_txt_1y"
+            android:layout_marginHorizontal="2dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/stadistics"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@id/stadistics_title"
+        app:layout_constraintTop_toBottomOf="@id/filter_containers"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -1,6 +1,5 @@
 package com.example.dados
 
-import android.content.Context
 import android.icu.text.SimpleDateFormat
 import android.icu.util.Calendar
 import android.os.Bundle
@@ -52,7 +51,7 @@ class ResultFragment : Fragment() {
         }
 
         val date = Calendar.getInstance().time
-        val formatter = SimpleDateFormat("dd/MM/yyyy-HH:mm")
+        val formatter = SimpleDateFormat("dd/MM/yyyy_HH:mm")
         val dateformatted = formatter.format(date)
 
         result.text = resultNumber.toString()
@@ -60,7 +59,8 @@ class ResultFragment : Fragment() {
 
         btn.setOnClickListener {
             // Guardar en historial antes de volver
-            saveToHistory(
+            HistoryHelper.saveToHistory(
+                requireContext(),
                 result.text.toString(),
                 dicestopass,
                 dateformatted
@@ -68,20 +68,6 @@ class ResultFragment : Fragment() {
 
             view.findNavController().navigate(R.id.action_resultFragment_to_diceFragment)
         }
-    }
-
-    private fun saveToHistory(result: String, dices: String, dateTime: String) {
-        val sharedPrefs = requireContext().getSharedPreferences("DiceHistory", Context.MODE_PRIVATE)
-        val currentHistory = sharedPrefs.getString("history", "") ?: ""
-
-        val newEntry = "$result;;$dices;;$dateTime"
-        val updatedHistory = if (currentHistory.isEmpty()) {
-            newEntry
-        } else {
-            "$newEntry|$currentHistory" // Agrega al inicio para mostrar lo más reciente primero
-        }
-
-        sharedPrefs.edit().putString("history", updatedHistory).apply()
     }
 
     override fun onDestroyView() {

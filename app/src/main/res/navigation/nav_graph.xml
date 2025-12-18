@@ -41,13 +41,9 @@
         <action
             android:id="@+id/action_resultFragment_to_diceFragment"
             app:destination="@id/diceFragment" />
-        <!-- Argumento recibido desde la acción anterior -->
         <argument
             android:name="result"
             app:argType="string" />
-        <action
-            android:id="@+id/action_resultFragment_to_historyFragment"
-            app:destination="@id/historyFragment" />
     </fragment>
     <fragment
         android:id="@+id/historyFragment"

@@ -19,4 +19,8 @@
     <string name="sound_txt">Sonido</string>
     <string name="navigation_drawer_open">Abrir menú</string>
     <string name="navigation_drawer_close">Cerrar menú</string>
+    <string name="filter_txt_1d">1D</string>
+    <string name="filter_txt_7d">7D</string>
+    <string name="filter_txt_1m">1M</string>
+    <string name="filter_txt_1y">1Y</string>
 </resources>

@@ -1,6 +1,5 @@
 package com.example.dados
 
-import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -27,29 +26,10 @@ class HistoryFragment : Fragment() {
         recyclerView = view.findViewById(R.id.history_list)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
-        val historyList = loadHistoryFromPreferences()
+        // Cargar el historial
+        val historyList = HistoryHelper.loadHistory(requireContext())
 
         adapter = HistoryAdapter(historyList)
         recyclerView.adapter = adapter
-    }
-
-    private fun loadHistoryFromPreferences(): List<HistoryCard> {
-        val sharedPrefs = requireContext().getSharedPreferences("DiceHistory", Context.MODE_PRIVATE)
-        val historyString = sharedPrefs.getString("history", "") ?: ""
-
-        return if (historyString.isNotEmpty()) {
-            historyString.split("|").mapNotNull { entry ->
-                val parts = entry.split(";;")
-                if (parts.size == 3) {
-                    HistoryCard(
-                        result = parts[0],
-                        dices = parts[1],
-                        dateTime = parts[2]
-                    )
-                } else null
-            }
-        } else {
-            emptyList()
-        }
     }
 }
