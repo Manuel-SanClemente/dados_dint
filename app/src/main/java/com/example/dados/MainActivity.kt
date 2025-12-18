@@ -57,9 +57,9 @@ class MainActivity : AppCompatActivity() {
                 R.id.stats_option -> {
                     navController.navigate(R.id.stadisticsFragment)
                 }
-                R.id.config_option -> {
+                /* R.id.config_option -> {
                     navController.navigate(R.id.configFragment)
-                }
+                } */
             }
             binding.drawerLayout.closeDrawer(GravityCompat.START)
             true

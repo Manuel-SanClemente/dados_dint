@@ -23,12 +23,12 @@
         app:showAsAction="always">
 
     </item>
-
+<!--
     <item
         android:id="@+id/config_option"
         android:title="@string/config_title"
         app:showAsAction="always" >
 
     </item>
-
+-->
 </menu>

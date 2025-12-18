@@ -31,14 +31,14 @@ class DiceAdapter(private val diceList: MutableList<DiceCardItem>) :
 
         // Asignar la imagen correspondiente según el nombre del dado
         val imageResource = when (diceItem.diceName) {
-            "D4" -> R.drawable.light_d4
-            "D6" -> R.drawable.light_d6
-            "D8" -> R.drawable.light_d8
-            "D10" -> R.drawable.light_d10
-            "D12" -> R.drawable.light_d12
-            "D20" -> R.drawable.light_d20
-            "D100" -> R.drawable.light_d100
-            else -> R.drawable.light_d6 // Fallback por si acaso
+            "D4" -> R.drawable.d4
+            "D6" -> R.drawable.d6
+            "D8" -> R.drawable.d8
+            "D10" -> R.drawable.d10
+            "D12" -> R.drawable.d12
+            "D20" -> R.drawable.d20
+            "D100" -> R.drawable.d100
+            else -> R.drawable.d6 // Fallback por si acaso
         }
         holder.diceImage.setImageResource(imageResource)
 

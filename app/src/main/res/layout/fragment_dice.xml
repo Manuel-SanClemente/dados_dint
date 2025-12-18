@@ -49,7 +49,6 @@
                 android:id="@+id/d4_card"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
-                app:cardBackgroundColor="@color/gray"
                 android:layout_marginEnd="10dp"
                 app:cardCornerRadius="15dp"
                 android:checkable="true"
@@ -60,7 +59,7 @@
                     android:id="@+id/d4_img"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/light_d4"
+                    android:src="@drawable/d4"
                     android:padding="10dp"
                     />
 
@@ -70,7 +69,6 @@
                 android:id="@+id/d6_card"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
-                app:cardBackgroundColor="@color/gray"
                 android:layout_marginStart="10dp"
                 app:cardCornerRadius="15dp"
                 android:checkable="true"
@@ -81,7 +79,7 @@
                     android:id="@+id/d6_img"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/light_d6"
+                    android:src="@drawable/d6"
                     android:padding="10dp"
                     />
 
@@ -100,7 +98,6 @@
                 android:id="@+id/d8_card"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
-                app:cardBackgroundColor="@color/gray"
                 android:layout_marginEnd="10dp"
                 app:cardCornerRadius="15dp"
                 android:checkable="true"
@@ -111,7 +108,7 @@
                     android:id="@+id/d8_img"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/light_d8"
+                    android:src="@drawable/d8"
                     android:padding="10dp"
                     />
 
@@ -121,7 +118,6 @@
                 android:id="@+id/d10_card"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
-                app:cardBackgroundColor="@color/gray"
                 android:layout_marginStart="10dp"
                 app:cardCornerRadius="15dp"
                 android:checkable="true"
@@ -132,7 +128,7 @@
                     android:id="@+id/d10_img"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/light_d10"
+                    android:src="@drawable/d10"
                     android:padding="10dp"
                     />
 
@@ -150,7 +146,6 @@
                 android:id="@+id/d12_card"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
-                app:cardBackgroundColor="@color/gray"
                 android:layout_marginEnd="10dp"
                 app:cardCornerRadius="15dp"
                 android:checkable="true"
@@ -161,7 +156,7 @@
                     android:id="@+id/d12_img"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/light_d12"
+                    android:src="@drawable/d12"
                     android:padding="10dp"
                     />
 
@@ -171,7 +166,6 @@
                 android:id="@+id/d20_card"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
-                app:cardBackgroundColor="@color/gray"
                 android:layout_marginStart="10dp"
                 app:cardCornerRadius="15dp"
                 android:checkable="true"
@@ -182,7 +176,7 @@
                     android:id="@+id/d20_img"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/light_d20"
+                    android:src="@drawable/d20"
                     android:padding="10dp"
                     />
 
@@ -194,7 +188,6 @@
             android:id="@+id/d100_card"
             android:layout_width="125dp"
             android:layout_height="125dp"
-            app:cardBackgroundColor="@color/gray"
             android:layout_margin="10dp"
             app:cardCornerRadius="15dp"
             android:checkable="true"
@@ -205,7 +198,7 @@
                 android:id="@+id/d100_img"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/light_d100"
+                android:src="@drawable/d100"
                 android:padding="10dp"
                 />
 

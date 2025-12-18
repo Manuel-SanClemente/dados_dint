@@ -1,9 +1,22 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.Dados" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+<resources>
+    <!-- Tema Claro -->
+    <style name="Theme.Dados" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/brown</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="android:fontFamily">@font/uncial</item>
+        <item name="android:windowBackground">@drawable/bg</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="materialButtonStyle">@style/Widget.App.Button</item>
+        <item name="materialCardViewStyle">@style/Widget.App.CardView</item>
     </style>
 
-    <style name="Theme.Dados" parent="Base.Theme.Dados" />
+    <!-- Estilos personalizados para botones -->
+    <style name="Widget.App.Button" parent="Widget.Material3.Button">
+        <item name="backgroundTint">?attr/colorPrimary</item>
+    </style>
+
+    <!-- Estilos personalizados para CardView -->
+    <style name="Widget.App.CardView" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">?attr/colorPrimary</item>
+    </style>
 </resources>
