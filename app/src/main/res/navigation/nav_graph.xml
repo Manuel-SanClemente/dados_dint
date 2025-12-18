@@ -51,7 +51,11 @@
         android:id="@+id/historyFragment"
         android:name="com.example.dados.HistoryFragment"
         android:label="HistoryFragment"
-        tools:layout="@layout/fragment_history"/>
+        tools:layout="@layout/fragment_history">
+        <argument
+            android:name="entry"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/stadisticsFragment"
         android:name="com.example.dados.StadisticsFragment"

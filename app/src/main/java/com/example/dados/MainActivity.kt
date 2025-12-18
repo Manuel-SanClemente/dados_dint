@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
                     navController.navigate(R.id.configFragment)
                 }
             }
-            binding.drawerLayout.closeDrawer(GravityCompat.END)
+            binding.drawerLayout.closeDrawer(GravityCompat.START)
             true
         }
     }

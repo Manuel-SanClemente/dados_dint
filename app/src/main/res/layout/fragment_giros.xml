@@ -34,7 +34,8 @@
         app:layout_constraintTop_toBottomOf="@+id/howmany_title"
         app:layout_constraintBottom_toTopOf="@+id/howmany_btns"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginVertical="40dp">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/howmany_list"
