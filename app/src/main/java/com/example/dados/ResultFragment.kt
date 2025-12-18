@@ -47,7 +47,7 @@ class ResultFragment : Fragment() {
     }
 
     fun calculateRolls(dice: Int, rolls: Int): List<Int> {
-        val result = List (rolls) { Random.nextInt(0, 4) }
+        val result = List (rolls) { Random.nextInt(0, dice) }
         return result
     }
 }
