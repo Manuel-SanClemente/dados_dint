@@ -30,6 +30,7 @@ class ResultFragment : Fragment() {
         val ttd = ResultFragmentArgs.fromBundle(requireArguments()).result
 
         val list = ttd.split(" ")
+        //.split("_")
 
         val result = binding.resultTxt
         val desc = binding.resultDetails
